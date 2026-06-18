@@ -146,7 +146,7 @@ body{font-family:-apple-system,'Helvetica Neue',sans-serif;background:#F5F5F7;co
   <div><div class="hdr-t">FIFA WM 2026</div><div class="hdr-s">USA · KANADA · MEXIKO</div></div>
   <div class="live" style="display:flex;flex-direction:column;align-items:center;gap:1px;padding:5px 10px;line-height:1.1">
     <span style="font-size:10px;letter-spacing:1px">TAG 8</span>
-    <span style="font-size:8px;opacity:0.85;letter-spacing:0.3px">18.06. 15:39</span>
+    <span style="font-size:8px;opacity:0.85;letter-spacing:0.3px">18.06. 17:13</span>
   </div>
 </div>
 
@@ -190,7 +190,7 @@ const F={
 };
 const GRP={
   E:{teams:["Deutschland","Elfenbeinküste","Ecuador","Curaçao"],matches:[
-    {home:"Deutschland",away:"Curaçao",sh:7,sa:1,played:true,date:"14.06.",sc:"Musiala 2×, Havertz, Wirtz, Gnabry, Füllkrug, Kimmich"},
+    {home:"Deutschland",away:"Curaçao",sh:7,sa:1,played:true,date:"14.06.",sc:"Nmecha, Schlotterbeck, Havertz 2× (1 Elfmeter), Musiala, Brown, Undav"},
     {home:"Elfenbeinküste",away:"Ecuador",sh:null,sa:null,played:false,date:"14.06."},
     {home:"Deutschland",away:"Elfenbeinküste",sh:null,sa:null,played:false,date:"20.06.",venue:"Toronto"},
     {home:"Ecuador",away:"Curaçao",sh:null,sa:null,played:false,date:"20.06."},
@@ -251,21 +251,20 @@ const TODAY=[
   {time:"21:00",status:"BALD",home:"Schweiz",away:"Bosnien-Hz.",sh:null,sa:null,group:"B",venue:"Los Angeles"},
 ];
 const INJ={
-  updated:"Stand: 16. Juni 2026",
-  absent:[
-    {name:"Marc-André ter Stegen",pos:"TW",reason:"Knieprobleme — nicht im WM-Kader"},
-    {name:"Lennart Karl",pos:"DEF",reason:"Verletzung vor WM — ersetzt durch Ouédraogo"},
+  updated:"Stand: 18. Juni 2026",
+  absent:[],
+  watch:[
+    {name:"Jamal Musiala",pos:"MF",reason:"Laut Nagelsmann noch nicht in Bestform nach Verletzung — \"von Training zu Training gesteigert\""},
   ],
-  watch:[{name:"Leroy Sané",pos:"MF",reason:"Fitness unter Beobachtung nach schwieriger Saison"}],
   fit:[
-    {name:"Jamal Musiala",pos:"MF",reason:"100% fit — 2 Tore vs. Curaçao"},
-    {name:"Kai Havertz",pos:"MF",reason:"100% fit — 1 Tor WM-Auftakt"},
+    {name:"Team-Status",pos:"ALLE",reason:"Vorbereitung auf Elfenbeinküste (Sa. 22 Uhr, Toronto) läuft seit 17.06. — keine neuen Ausfälle"},
+    {name:"Antonio Rüdiger",pos:"DEF",reason:"Vertrag bei Real Madrid bis 2027 verlängert — voller Fokus auf WM"},
   ],
 };
 const ANA={
   "DFB aktuell":[
     {l:"AUFTAKT",t:"7:1-Kantersieg gegen Curaçao — stärkste deutsche WM-Eröffnung seit 8:0 gegen Saudi-Arabien 2002."},
-    {l:"TORSCHÜTZEN",t:"Musiala 2×, Havertz, Wirtz, Gnabry, Füllkrug, Kimmich — breite Torverteilung zeigt Kaderstärke."},
+    {l:"TORSCHÜTZEN",t:"Nmecha, Schlotterbeck, Havertz 2× (davon 1 Elfmeter), Musiala, Brown, Undav — breite Torverteilung zeigt Kaderstärke."},
     {l:"NÄCHSTES SPIEL",t:"20. Juni vs. Elfenbeinküste in Toronto (22:00 MEZ) — in 2 Tagen. Afrikameister ist härtester Gruppentest."},
     {l:"K.O.-PERSPEKTIVE",t:"Gruppensieger → Sechzehntelfinale Boston. Mögliche Gegner: Brasilien, Niederlande oder Marokko."},
   ],
@@ -276,10 +275,10 @@ const ANA={
     {l:"RISIKO",t:"Gegen physisch starke Teams könnten Konterräume entstehen — Screening wird entscheidend."},
   ],
   "Musiala & Wirtz":[
-    {l:"MUSIALA",t:"2 Tore + 1 Assist — FC-Bayern-Star in Weltklasse-Form: Dribbling, Abschluss, Pressing-Resistenz top."},
-    {l:"WIRTZ",t:"1 Tor, 2 Vorlagen — Bayer-Kapitän als Taktgeber. Positionstausch mit Musiala gefährlichste Achse im Turnier."},
-    {l:"ZUSAMMENSPIEL",t:"Permanentes Positionstauschen überlastet Defensiven. 14 Torschüsse allein aus ihren Aktionen."},
-    {l:"WM-FAKTOR",t:"Beide erst 22/23 Jahre alt. Top-5 Torschützenliste realistisch."},
+    {l:"MUSIALA",t:"1 Tor (47.) vs. Curaçao — FC-Bayern-Star traf zum 4:1, war an mehreren Vorbereitungen beteiligt."},
+    {l:"WIRTZ",t:"Vorbereitete Schlotterbecks Tor mit Doppelpass-Aktion — Bayer-Kapitän als Taktgeber, noch ohne eigenen Treffer."},
+    {l:"ZUSAMMENSPIEL",t:"Beide oft im Halbraum unterwegs, suchen ständig die Verbindung zueinander — Kernstück des Offensivspiels."},
+    {l:"WM-FAKTOR",t:"Beide erst 22/23 Jahre alt. Bei steigender Form realistische Kandidaten für die Torschützenliste."},
   ],
   "Favoriten":[
     {l:"🥇 ARGENTINIEN",t:"Titelverteidiger mit Messi. Scaloni-System eingespielt wie eine Maschine."},

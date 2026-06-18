@@ -144,7 +144,10 @@ body{font-family:-apple-system,'Helvetica Neue',sans-serif;background:#F5F5F7;co
 
 <div class="hdr">
   <div><div class="hdr-t">FIFA WM 2026</div><div class="hdr-s">USA · KANADA · MEXIKO</div></div>
-  <div class="live">LIVE</div>
+  <div class="live" style="display:flex;flex-direction:column;align-items:center;gap:1px;padding:5px 10px;line-height:1.1">
+    <span style="font-size:10px;letter-spacing:1px">TAG 8</span>
+    <span style="font-size:8px;opacity:0.85;letter-spacing:0.3px">18.06. 15:39</span>
+  </div>
 </div>
 
 <div class="wheel-wrap">
@@ -197,14 +200,24 @@ const GRP={
   A:{teams:["Mexiko","Südafrika","Südkorea","Tschechien"],matches:[
     {home:"Mexiko",away:"Südafrika",sh:2,sa:1,played:true,date:"11.06."},
     {home:"Südkorea",away:"Tschechien",sh:2,sa:0,played:true,date:"11.06."},
+    {home:"Mexiko",away:"Tschechien",sh:null,sa:null,played:false,date:"18.06.",time:"18:00",live:true},
+    {home:"Südafrika",away:"Tschechien",sh:null,sa:null,played:false,date:"18.06."},
   ]},
   B:{teams:["Kanada","Bosnien-Hz.","Schweiz","Katar"],matches:[
     {home:"Kanada",away:"Bosnien-Hz.",sh:1,sa:0,played:true,date:"12.06."},
+    {home:"Katar",away:"Schweiz",sh:1,sa:1,played:true,date:"13.06."},
+    {home:"Schweiz",away:"Bosnien-Hz.",sh:null,sa:null,played:false,date:"18.06.",time:"21:00",live:true},
+    {home:"Kanada",away:"Katar",sh:null,sa:null,played:false,date:"19.06."},
   ]},
-  C:{teams:["Brasilien","Marokko","Haiti","Schottland"],matches:[]},
-  D:{teams:["USA","Paraguay","Australien","Türkei"],matches:[]},
+  C:{teams:["Brasilien","Marokko","Haiti","Schottland"],matches:[
+    {home:"Haiti",away:"Schottland",sh:1,sa:0,played:true,date:"14.06."},
+  ]},
+  D:{teams:["USA","Paraguay","Australien","Türkei"],matches:[
+    {home:"Australien",away:"Türkei",sh:2,sa:0,played:true,date:"14.06."},
+  ]},
   F:{teams:["Niederlande","Japan","Schweden","Tunesien"],matches:[
     {home:"Niederlande",away:"Japan",sh:2,sa:2,played:true,date:"14.06."},
+    {home:"Schweden",away:"Tunesien",sh:5,sa:1,played:true,date:"15.06."},
   ]},
   G:{teams:["Belgien","Ägypten","Iran","Neuseeland"],matches:[
     {home:"Belgien",away:"Ägypten",sh:1,sa:1,played:true,date:"15.06."},
@@ -215,16 +228,27 @@ const GRP={
     {home:"Saudi-Arabien",away:"Uruguay",sh:1,sa:1,played:true,date:"16.06."},
   ]},
   I:{teams:["Frankreich","Senegal","Norwegen","Irak"],matches:[
-    {home:"Frankreich",away:"Senegal",sh:null,sa:null,played:false,date:"16.06.",live:true},
+    {home:"Frankreich",away:"Senegal",sh:3,sa:1,played:true,date:"16.06.",sc:"Mbappé 2×, Barcola"},
+    {home:"Irak",away:"Norwegen",sh:1,sa:4,played:true,date:"17.06.",sc:"Haaland 2×"},
   ]},
-  J:{teams:["Argentinien","Algerien","Österreich","Jordanien"],matches:[]},
-  K:{teams:["Portugal","Usbekistan","Kolumbien","DR Kongo*"],matches:[]},
-  L:{teams:["England","Kroatien","Ghana","Panama"],matches:[]},
+  J:{teams:["Argentinien","Algerien","Österreich","Jordanien"],matches:[
+    {home:"Argentinien",away:"Algerien",sh:3,sa:0,played:true,date:"17.06.",sc:"Messi 3×"},
+    {home:"Österreich",away:"Jordanien",sh:3,sa:1,played:true,date:"17.06.",sc:"Schmid, Arnautovic, Eigentor"},
+  ]},
+  K:{teams:["Portugal","Usbekistan","Kolumbien","DR Kongo*"],matches:[
+    {home:"Portugal",away:"DR Kongo*",sh:1,sa:1,played:true,date:"17.06."},
+    {home:"Usbekistan",away:"Kolumbien",sh:1,sa:3,played:true,date:"18.06."},
+  ]},
+  L:{teams:["England","Kroatien","Ghana","Panama"],matches:[
+    {home:"England",away:"Kroatien",sh:4,sa:2,played:true,date:"17.06.",sc:"Kane 2×, Bellingham, Rashford"},
+    {home:"Ghana",away:"Panama",sh:1,sa:0,played:true,date:"18.06.",sc:"Yirenkyi (90+)"},
+  ]},
 };
 const TODAY=[
-  {time:"00:00",status:"FT",home:"Saudi-Arabien",away:"Uruguay",sh:1,sa:1,group:"H",venue:"Miami"},
-  {time:"03:00",status:"FT",home:"Iran",away:"Neuseeland",sh:2,sa:2,group:"G",venue:"Los Angeles"},
-  {time:"21:00",status:"LIVE",home:"Frankreich",away:"Senegal",sh:null,sa:null,group:"I",venue:"New Jersey"},
+  {time:"04:00",status:"FT",home:"Usbekistan",away:"Kolumbien",sh:1,sa:3,group:"K",venue:"Mexiko-Stadt"},
+  {time:"01:00",status:"FT",home:"Ghana",away:"Panama",sh:1,sa:0,group:"L",venue:"Toronto"},
+  {time:"18:00",status:"LIVE",home:"Tschechien",away:"Südafrika",sh:null,sa:null,group:"A",venue:"Atlanta"},
+  {time:"21:00",status:"BALD",home:"Schweiz",away:"Bosnien-Hz.",sh:null,sa:null,group:"B",venue:"Los Angeles"},
 ];
 const INJ={
   updated:"Stand: 16. Juni 2026",
@@ -242,7 +266,7 @@ const ANA={
   "DFB aktuell":[
     {l:"AUFTAKT",t:"7:1-Kantersieg gegen Curaçao — stärkste deutsche WM-Eröffnung seit 8:0 gegen Saudi-Arabien 2002."},
     {l:"TORSCHÜTZEN",t:"Musiala 2×, Havertz, Wirtz, Gnabry, Füllkrug, Kimmich — breite Torverteilung zeigt Kaderstärke."},
-    {l:"NÄCHSTES SPIEL",t:"20. Juni vs. Elfenbeinküste in Toronto (22:00 MEZ). Afrikameister ist härtester Gruppentest."},
+    {l:"NÄCHSTES SPIEL",t:"20. Juni vs. Elfenbeinküste in Toronto (22:00 MEZ) — in 2 Tagen. Afrikameister ist härtester Gruppentest."},
     {l:"K.O.-PERSPEKTIVE",t:"Gruppensieger → Sechzehntelfinale Boston. Mögliche Gegner: Brasilien, Niederlande oder Marokko."},
   ],
   "Taktik":[
@@ -523,9 +547,9 @@ function rHeute(){
     ${INJ.fit.map(p=>`<div class="inj g"><span>🟢</span><div><div class="inj-n">${p.name}<span class="inj-p">${p.pos}</span></div><div class="inj-r">${p.reason}</div></div></div>`).join('')}`;
   return`<div class="card">
   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
-    <div><div style="font-weight:800;font-size:16px">Heute · 16.06.2026</div>
-    <div style="font-size:11px;color:#8E8E93;margin-top:2px">3 Spiele · Alle Zeiten MEZ</div></div>
-    <div class="spieltag">SPIELTAG 6</div>
+    <div><div style="font-weight:800;font-size:16px">Heute · 18.06.2026</div>
+    <div style="font-size:11px;color:#8E8E93;margin-top:2px">4 Spiele · Alle Zeiten MEZ</div></div>
+    <div class="spieltag">SPIELTAG 7–8</div>
   </div>${ms}</div>
   <div class="card">
   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">

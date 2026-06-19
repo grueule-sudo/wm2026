@@ -145,8 +145,8 @@ body{font-family:-apple-system,'Helvetica Neue',sans-serif;background:#F5F5F7;co
 <div class="hdr">
   <div><div class="hdr-t">FIFA WM 2026</div><div class="hdr-s">USA · KANADA · MEXIKO</div></div>
   <div class="live" style="display:flex;flex-direction:column;align-items:center;gap:1px;padding:5px 10px;line-height:1.1">
-    <span style="font-size:10px;letter-spacing:1px">TAG 8</span>
-    <span style="font-size:8px;opacity:0.85;letter-spacing:0.3px">18.06. 17:13</span>
+    <span style="font-size:10px;letter-spacing:1px">TAG 9</span>
+    <span style="font-size:8px;opacity:0.85;letter-spacing:0.3px">19.06. 07:25</span>
   </div>
 </div>
 
@@ -198,16 +198,16 @@ const GRP={
     {home:"Curaçao",away:"Elfenbeinküste",sh:null,sa:null,played:false,date:"25.06."},
   ]},
   A:{teams:["Mexiko","Südafrika","Südkorea","Tschechien"],matches:[
-    {home:"Mexiko",away:"Südafrika",sh:2,sa:1,played:true,date:"11.06."},
+    {home:"Mexiko",away:"Südafrika",sh:2,sa:0,played:true,date:"11.06."},
     {home:"Südkorea",away:"Tschechien",sh:2,sa:0,played:true,date:"11.06."},
-    {home:"Mexiko",away:"Tschechien",sh:null,sa:null,played:false,date:"18.06.",time:"18:00",live:true},
-    {home:"Südafrika",away:"Tschechien",sh:null,sa:null,played:false,date:"18.06."},
+    {home:"Tschechien",away:"Südafrika",sh:1,sa:1,played:true,date:"18.06.",sc:"Sadílek (6.) — Mokoena (83., Elfmeter)"},
+    {home:"Mexiko",away:"Südkorea",sh:null,sa:null,played:false,date:"25.06."},
   ]},
   B:{teams:["Kanada","Bosnien-Hz.","Schweiz","Katar"],matches:[
-    {home:"Kanada",away:"Bosnien-Hz.",sh:1,sa:0,played:true,date:"12.06."},
+    {home:"Kanada",away:"Bosnien-Hz.",sh:1,sa:1,played:true,date:"12.06."},
     {home:"Katar",away:"Schweiz",sh:1,sa:1,played:true,date:"13.06."},
-    {home:"Schweiz",away:"Bosnien-Hz.",sh:null,sa:null,played:false,date:"18.06.",time:"21:00",live:true},
-    {home:"Kanada",away:"Katar",sh:null,sa:null,played:false,date:"19.06."},
+    {home:"Schweiz",away:"Bosnien-Hz.",sh:4,sa:1,played:true,date:"18.06.",sc:"Manzambi 2×, Vargas, Xhaka (Elfmeter) — Mahmić"},
+    {home:"Kanada",away:"Katar",sh:null,sa:null,played:false,date:"24.06."},
   ]},
   C:{teams:["Brasilien","Marokko","Haiti","Schottland"],matches:[
     {home:"Haiti",away:"Schottland",sh:1,sa:0,played:true,date:"14.06."},
@@ -247,8 +247,8 @@ const GRP={
 const TODAY=[
   {time:"04:00",status:"FT",home:"Usbekistan",away:"Kolumbien",sh:1,sa:3,group:"K",venue:"Mexiko-Stadt"},
   {time:"01:00",status:"FT",home:"Ghana",away:"Panama",sh:1,sa:0,group:"L",venue:"Toronto"},
-  {time:"18:00",status:"LIVE",home:"Tschechien",away:"Südafrika",sh:null,sa:null,group:"A",venue:"Atlanta"},
-  {time:"21:00",status:"BALD",home:"Schweiz",away:"Bosnien-Hz.",sh:null,sa:null,group:"B",venue:"Los Angeles"},
+  {time:"18:00",status:"FT",home:"Tschechien",away:"Südafrika",sh:1,sa:1,group:"A",venue:"Atlanta"},
+  {time:"21:00",status:"FT",home:"Schweiz",away:"Bosnien-Hz.",sh:4,sa:1,group:"B",venue:"Los Angeles"},
 ];
 const INJ={
   updated:"Stand: 18. Juni 2026",
@@ -546,7 +546,7 @@ function rHeute(){
     ${INJ.fit.map(p=>`<div class="inj g"><span>🟢</span><div><div class="inj-n">${p.name}<span class="inj-p">${p.pos}</span></div><div class="inj-r">${p.reason}</div></div></div>`).join('')}`;
   return`<div class="card">
   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
-    <div><div style="font-weight:800;font-size:16px">Heute · 18.06.2026</div>
+    <div><div style="font-weight:800;font-size:16px">Letzte Ergebnisse · 18.06.2026</div>
     <div style="font-size:11px;color:#8E8E93;margin-top:2px">4 Spiele · Alle Zeiten MEZ</div></div>
     <div class="spieltag">SPIELTAG 7–8</div>
   </div>${ms}</div>
